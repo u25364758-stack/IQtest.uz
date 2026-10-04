@@ -1,0 +1,22 @@
+:root { color-scheme: light; font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; color: #172033; background: #f4f7fb; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at top, #e7efff, #f4f7fb 55%); }
+.container { width: min(100%, 620px); margin: 0 auto; padding: max(24px, env(safe-area-inset-top)) 18px max(28px, env(safe-area-inset-bottom)); }
+.card { background: #fff; border: 1px solid #e6eaf1; border-radius: 22px; padding: clamp(22px, 6vw, 36px); box-shadow: 0 16px 44px #25365712; }
+h1 { margin: 4px 0 10px; text-align: center; font-size: 30px; letter-spacing: .04em; }
+.eyebrow { margin: 0; color: #5975ad; text-align: center; font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+.muted { margin: 0 0 22px; color: #67738a; text-align: center; line-height: 1.5; }
+label { display: block; margin: 15px 0 7px; color: #4d596d; font-size: 13px; font-weight: 700; }
+input, select { display: block; width: 100%; min-height: 50px; padding: 12px 14px; border: 1px solid #d9dfeb; border-radius: 12px; background: #fff; color: inherit; font: inherit; font-size: 16px; }
+button { width: 100%; min-height: 50px; margin-top: 20px; padding: 13px 16px; border: 0; border-radius: 12px; background: #3159b8; color: #fff; font: inherit; font-weight: 750; cursor: pointer; }
+button:disabled { opacity: .48; cursor: not-allowed; }
+.hidden { display: none; }
+.top { display: flex; justify-content: space-between; margin-bottom: 16px; color: #4d596d; font-size: 14px; font-weight: 750; font-variant-numeric: tabular-nums; }
+.progress { height: 7px; overflow: hidden; border-radius: 99px; background: #e9edf5; }
+#progressBar { width: 0; height: 100%; border-radius: inherit; background: #3159b8; transition: width .2s ease; }
+#question { min-height: 70px; margin: 26px 0 18px; font-size: 21px; line-height: 1.45; }
+.option { display: block; min-height: 52px; margin: 10px 0 0; border: 1px solid #dfe4ed; background: #fff; color: #253047; text-align: left; font-weight: 600; }
+.option.selected { border: 2px solid #3159b8; background: #f0f4ff; color: #23499f; }
+#resultText { color: #4d596d; text-align: center; line-height: 1.5; }
+#resultText p { margin: 22px 0 0; }
+.error { min-height: 20px; margin: 12px 0 0; color: #b42318; font-size: 14px; }
