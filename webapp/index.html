@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f4f7fb">
+  <title>IQ Test</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="container">
+    <section id="profileScreen" class="card">
+      <p class="eyebrow">MANTIQIY FIKRLASH</p>
+      <h1>IQ TEST</h1>
+      <p class="muted">Boshlashdan oldin ma’lumotlaringizni kiriting.</p>
+      <p class="muted">Bu test ko‘ngilochar mantiqiy baholashdir; klinik yoki professional IQ tashxisi emas.</p>
+      <form id="profileForm">
+        <label for="fullName">F.I.SH</label>
+        <input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="120" required>
+        <label for="age">Yosh</label>
+        <input id="age" name="age" type="number" min="5" max="120" inputmode="numeric" required>
+        <label for="gender">Jins</label>
+        <select id="gender" name="gender" required>
+          <option value="">Tanlang</option><option value="male">Erkak</option><option value="female">Ayol</option>
+        </select>
+        <button id="startButton" type="submit">TESTNI BOSHLASH</button>
+      </form>
+      <p id="error" class="error" role="alert"></p>
+    </section>
+    <section id="testScreen" class="card hidden" aria-live="polite">
+      <div class="top"><span id="questionNumber">1 / 25</span><span id="timer">00:00</span></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <h2 id="question"></h2><div id="options"></div>
+      <button id="nextButton" type="button" disabled>KEYINGI</button>
+    </section>
+    <section id="resultScreen" class="card hidden">
+      <p class="eyebrow">NATIJA</p><h1>TEST YAKUNLANDI</h1><p id="resultText"></p>
+      <button id="restartButton" type="button">YANGI TEST</button>
+    </section>
+  </main>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="/app.js" defer></script>
+</body>
+</html>
